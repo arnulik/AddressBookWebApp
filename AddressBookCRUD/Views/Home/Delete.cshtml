@@ -1,0 +1,60 @@
+﻿@model AddressBookCRUD.Models.Person
+
+<h2>
+    Удалить
+</h2>
+@using (Html.BeginForm("delete", "home", FormMethod.Post, new { id = "popupForm" }))
+{
+            @Html.HiddenFor(a => a.Id)
+            <div class="form-group">
+        <label>
+            Имя
+        </label>
+        <p>
+            @Model.FirstName
+        </p>
+    </div>
+    <div class="form-group">
+        <label>
+            Фамилия
+        </label>
+        <p>
+            @Model.LastName
+        </p>
+    </div>
+    <div class="form-group">
+        <label>
+            Отчество
+        </label>
+        <p>
+            @Model.SecondName
+        </p>
+    </div>
+    <div class="form-group">
+        <label>
+            Дата рождения
+        </label>
+        <p>
+            @Model.BirthDate
+        </p>
+    </div>
+    <div class="form-group">
+        <label>
+            Описание
+        </label>
+        <p>
+            @Model.Description
+        </p>
+    </div>
+    <div class="form-group">
+        <label>
+            Email
+        </label>
+        <p>
+            @Model.Email
+        </p>
+    </div>
+    <div>
+        <input type="submit" value="Удалить" />
+    </div>
+}
